@@ -14,6 +14,7 @@ const TestForm = () => {
             <p>
                 <button type="submit">Submit</button>
             </p>
+            <input type="hidden" name="_next" value="false" />
         </form>
     )
 }
