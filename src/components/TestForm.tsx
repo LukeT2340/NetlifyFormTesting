@@ -5,14 +5,14 @@ const TestForm = () => {
         const myForm = event.target;
         const formData = new FormData(myForm);
         
-        fetch("/", {
+        fetch("/your-custom-endpoint", {  // Update the URL to your serverless function or endpoint
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: new URLSearchParams(formData).toString(),
         })
           .then(() => console.log("Form successfully submitted"))
-          .catch((error) => alert(error));
-      };      
+          .catch((error) => alert("Submission error: ", error));
+      };
 
     return (
         <form name="contact" method="POST" onSubmit={handleSubmit}>
