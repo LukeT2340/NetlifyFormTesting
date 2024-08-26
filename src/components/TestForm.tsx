@@ -1,7 +1,7 @@
 
 const TestForm = () => {
     return (
-        <form name="contact" method="POST" data-netlify="true" onSubmit={(e)=>{e.preventDefault()}}>
+        <form name="contact" method="POST" data-netlify="true" onSubmit={(e)=>{e.preventDefault}}>
             <input type="hidden" name="form-name" value="contact" />
             <p>
                 <label>Your Name: <input type="text" name="name" /></label>
