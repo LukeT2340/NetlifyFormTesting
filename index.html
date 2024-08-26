@@ -189,7 +189,15 @@
   <script type="module" src="/src/main.tsx"></script>
   <footer class="masthead"></footer>
 
-  <form name="contact" data-netlify="true"></form>
+  <form name="contact" data-netlify="true" hidden>
+    <input type="hidden" name="form-name" value="test-form" />
+    <p>
+        <label>Name: <input type="text" name="name" required /></label>
+    </p>
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+  </form>
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WV7FLW7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
