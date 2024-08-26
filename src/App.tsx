@@ -11,6 +11,7 @@ import slides from "./js/data/slider.ts";
 import img1 from "./assets/images/desktop/image-1.jpg";
 import img2 from "./assets/images/desktop/image-2.jpg";
 import img3 from "./assets/images/desktop/image-3.jpg";
+import TestForm from "./components/TestForm.tsx";
 
 const App = () => {
   let slides1 = slides.slides1;
@@ -114,6 +115,7 @@ const App = () => {
                 />
               </div>
             </section>
+            <TestForm />
           </article>
           <Footer />
         </main>
