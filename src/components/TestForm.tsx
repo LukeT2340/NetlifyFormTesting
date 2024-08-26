@@ -5,13 +5,18 @@ const TestForm = () => {
         const myForm = event.target;
         const formData = new FormData(myForm);
         
-        fetch("/your-custom-endpoint", {  // Update the URL to your serverless function or endpoint
+        const urlSearchParams = new URLSearchParams();
+        formData.forEach((value, key) => {
+            urlSearchParams.append(key, value as string); 
+        });
+
+        fetch("/", {  
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString(),
+          body: new URLSearchParams(urlSearchParams).toString(),
         })
           .then(() => console.log("Form successfully submitted"))
-          .catch((error) => alert("Submission error: ", error));
+          .catch(() => alert("Submission error"));
       };
 
     return (
