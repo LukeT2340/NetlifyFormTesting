@@ -1,6 +1,7 @@
 const TestForm = () => {
     return (
-        <form name="contact" netlify>
+        <form name="contact" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
             <p>
                 <label>Name <input type="text" name="name" /></label>
             </p>
