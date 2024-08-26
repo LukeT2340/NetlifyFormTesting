@@ -1,5 +1,5 @@
 const TestForm = () => {
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
       
         const myForm = event.target;
