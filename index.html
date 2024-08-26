@@ -189,10 +189,11 @@
   <script type="module" src="/src/main.tsx"></script>
   <footer class="masthead"></footer>
 
+  <!-- Add copy of form here so netlify knows about it -->  
   <form name="contact" data-netlify="true" hidden>
     <input type="hidden" name="form-name" value="test-form" />
     <p>
-        <label>Name: <input type="text" name="name" required /></label>
+        <label>Name: <input type="text" name="name" /></label>
     </p>
     <p>
         <button type="submit">Submit</button>
